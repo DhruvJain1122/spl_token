@@ -30,7 +30,7 @@
         v-for="action in Object.keys(accountComponents)"
         :key="action"
         :class="{
-          'is-black': currentAccountComponent === accountComponents[action]
+          'is-black': currentAccountComponent === accountComponents[action],
         }"
         class="button"
         @click="currentAccountComponent = accountComponents[action]"
@@ -85,7 +85,7 @@ export default defineComponent({
     CopyIcon,
     Approver,
     Revoker,
-    Heading
+    Heading,
   },
   setup() {
     const payerSecret = ref("");
@@ -100,7 +100,7 @@ export default defineComponent({
     const currentAccountComponent = ref(accountComponents.Mint);
 
     const errorMessage = ref("");
-    onErrorCaptured(err => {
+    onErrorCaptured((err) => {
       errorMessage.value = SolanaErrorHandler.getErrorMessage(err as Error);
       return false;
     });
@@ -119,8 +119,8 @@ export default defineComponent({
       splitAtUppercase,
       errorMessage,
       onUpdateAccountAddress,
-      payerSignsExternally
+      payerSignsExternally,
     };
-  }
+  },
 });
 </script>

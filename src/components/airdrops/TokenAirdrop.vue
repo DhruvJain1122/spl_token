@@ -57,17 +57,17 @@ export default defineComponent({
   emits: ["update:accountAddress"],
   components: {
     SecretFormField,
-    PublicKeyFormField
+    PublicKeyFormField,
   },
   props: {
     payerSecret: {
       type: String,
-      required: true
+      required: true,
     },
     payerSignsExternally: {
       type: Boolean,
-      default: true
-    }
+      default: true,
+    },
   },
   setup(props, { emit }) {
     const { payerSecret, payerSignsExternally } = toRefs(props);
@@ -107,8 +107,8 @@ export default defineComponent({
       tokenAmount,
       addressToAirdrop,
       onAirdropTokens,
-      faucetAddress
+      faucetAddress,
     };
-  }
+  },
 });
 </script>

@@ -8,5 +8,5 @@ export default {
   Burn: "token-burner",
   Close: "account-closer",
   Approve: "approver",
-  Revoke: "revoker"
+  Revoke: "revoker",
 };

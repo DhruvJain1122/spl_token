@@ -28,17 +28,17 @@ import PublicKeyFormField from "@/components/util/PublicKeyFormField.vue";
 import { inspectFaucet } from "@/solana/token";
 export default defineComponent({
   components: {
-    PublicKeyFormField
+    PublicKeyFormField,
   },
   props: {
     payerSecret: {
       type: String,
-      required: true
+      required: true,
     },
     payerSignsExternally: {
       type: Boolean,
-      default: true
-    }
+      default: true,
+    },
   },
   emits: ["update:accountAddress"],
   setup(_, { emit }) {
@@ -63,6 +63,6 @@ export default defineComponent({
       inspectingFaucet.value = false;
     };
     return { faucetAddress, inspectingFaucet, onInspectFaucet, faucetInfo };
-  }
+  },
 });
 </script>

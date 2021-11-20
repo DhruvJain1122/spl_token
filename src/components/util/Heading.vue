@@ -1,7 +1,7 @@
 <template>
   <div
-    style="font-family: 'Racing Sans One', cursive; font-size:70px"
-    class="has-text-black has-text-centered	"
+    style="font-family: 'Racing Sans One', cursive; font-size: 70px"
+    class="has-text-black has-text-centered"
   >
     {{ heading }}
   </div>
@@ -13,8 +13,8 @@ export default defineComponent({
   props: {
     heading: {
       type: String,
-      required: true
-    }
-  }
+      required: true,
+    },
+  },
 });
 </script>

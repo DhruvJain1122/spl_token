@@ -55,18 +55,18 @@ export default defineComponent({
   name: accountComponents.Approve,
   components: {
     SecretFormField,
-    PublicKeyFormField
+    PublicKeyFormField,
   },
   emits: ["update:accountAddress"],
   props: {
     payerSecret: {
       type: String,
-      required: true
+      required: true,
     },
     payerSignsExternally: {
       type: Boolean,
-      default: true
-    }
+      default: true,
+    },
   },
   setup(props, { emit }) {
     const { payerSecret, payerSignsExternally } = toRefs(props);
@@ -105,8 +105,8 @@ export default defineComponent({
       ownerSecret,
       delegateAddress,
       ownerSignsExternally,
-      tokenAmount
+      tokenAmount,
     };
-  }
+  },
 });
 </script>

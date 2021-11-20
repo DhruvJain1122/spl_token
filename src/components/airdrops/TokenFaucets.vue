@@ -34,7 +34,7 @@
         :key="action"
         :class="{
           'is-black':
-            currentTokenFaucetComponent === tokenFaucetComponents[action]
+            currentTokenFaucetComponent === tokenFaucetComponents[action],
         }"
         class="button"
         @click="currentTokenFaucetComponent = tokenFaucetComponents[action]"
@@ -76,7 +76,7 @@ export default defineComponent({
     TokenAirdrop,
     FaucetCreator,
     FaucetCloser,
-    FaucetInspector
+    FaucetInspector,
   },
   setup() {
     const payerSecret = ref("");
@@ -95,7 +95,7 @@ export default defineComponent({
     };
 
     const errorMessage = ref("");
-    onErrorCaptured(err => {
+    onErrorCaptured((err) => {
       errorMessage.value = SolanaErrorHandler.getErrorMessage(err as Error);
       return false;
     });
@@ -109,8 +109,8 @@ export default defineComponent({
       errorMessage,
       accountAddress,
       onUpdateAccountAddress,
-      accountLink
+      accountLink,
     };
-  }
+  },
 });
 </script>

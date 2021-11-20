@@ -17,41 +17,41 @@ const routes = [
   {
     path: "/account-creator",
     name: "account-creator",
-    component: AccountCreator
+    component: AccountCreator,
   },
   {
     path: "/account-editor",
     name: "account-editor",
-    component: AccountEditor
+    component: AccountEditor,
   },
   {
     path: "/sol-airdrop",
     name: "sol-airdrop",
-    component: Airdrop
+    component: Airdrop,
   },
   {
     path: "/faucet-creator",
     name: "faucet-creator",
-    component: FaucetCreator
+    component: FaucetCreator,
   },
   {
     path: "/faucet-closer",
     name: "faucet-closer",
-    component: FaucetCloser
+    component: FaucetCloser,
   },
   {
     path: "/token-airdrop",
     name: "token-airdrop",
-    component: TokenAirdrop
+    component: TokenAirdrop,
   },
   {
     path: "/token-faucets",
     name: "token-faucets",
-    component: TokenFaucets
-  }
+    component: TokenFaucets,
+  },
 ];
 
 export default createRouter({
   history: createWebHashHistory(),
-  routes
+  routes,
 });

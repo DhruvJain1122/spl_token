@@ -56,12 +56,12 @@ export default defineComponent({
   props: {
     payerSecret: {
       type: String,
-      required: true
+      required: true,
     },
     payerSignsExternally: {
       type: Boolean,
-      default: true
-    }
+      default: true,
+    },
   },
   setup(props, { emit }) {
     const { payerSecret, payerSignsExternally } = toRefs(props);
@@ -101,8 +101,8 @@ export default defineComponent({
       onTransferTokens,
       tokenAmount,
       ownerAccountSecret,
-      ownerSignsExternally
+      ownerSignsExternally,
     };
-  }
+  },
 });
 </script>

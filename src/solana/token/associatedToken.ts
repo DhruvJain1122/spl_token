@@ -6,7 +6,7 @@ import {
   sendAndConfirmTransaction as realSendAndConfirmTransaction,
   Transaction,
   Connection,
-  Account
+  Account,
 } from "@solana/web3.js";
 import { TOKEN_PROGRAM_ID } from "@solana/spl-token";
 import { createAccount } from "@/solana/account";
@@ -26,7 +26,7 @@ const findAssociatedTokenAccountPublicKey = async (
       [
         ownerPublicKey.toBuffer(),
         TOKEN_PROGRAM_ID.toBuffer(),
-        tokenMintPublicKey.toBuffer()
+        tokenMintPublicKey.toBuffer(),
       ],
       SPL_ASSOCIATED_TOKEN_ACCOUNT_PROGRAM_ID
     )
@@ -46,14 +46,14 @@ const createIx = (
       {
         pubkey: associatedTokenAccountPublicKey,
         isSigner: false,
-        isWritable: true
+        isWritable: true,
       },
       { pubkey: ownerPublicKey, isSigner: false, isWritable: false },
       { pubkey: tokenMintPublicKey, isSigner: false, isWritable: false },
       { pubkey: SystemProgram.programId, isSigner: false, isWritable: false },
       { pubkey: TOKEN_PROGRAM_ID, isSigner: false, isWritable: false },
-      { pubkey: SYSVAR_RENT_PUBKEY, isSigner: false, isWritable: false }
-    ]
+      { pubkey: SYSVAR_RENT_PUBKEY, isSigner: false, isWritable: false },
+    ],
   });
 
 export const createAssociatedTokenAccount = async (
@@ -64,10 +64,11 @@ export const createAssociatedTokenAccount = async (
 ) => {
   const tokenMintPublicKey = new PublicKey(tokenMintAddress);
   const ownerPublicKey = new PublicKey(ownerAddress);
-  const associatedTokenAccountPublicKey = await findAssociatedTokenAccountPublicKey(
-    ownerPublicKey,
-    tokenMintPublicKey
-  );
+  const associatedTokenAccountPublicKey =
+    await findAssociatedTokenAccountPublicKey(
+      ownerPublicKey,
+      tokenMintPublicKey
+    );
   const connection = getConnection();
 
   if (feePayerSignsExternally) {
@@ -106,6 +107,6 @@ export function sendAndConfirmTransaction(
 ) {
   return realSendAndConfirmTransaction(connection, transaction, signers, {
     skipPreflight: false,
-    commitment: COMMITMENT
+    commitment: COMMITMENT,
   });
 }

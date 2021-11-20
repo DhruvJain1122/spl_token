@@ -45,18 +45,18 @@ export default defineComponent({
   name: accountComponents.SetCloser,
   components: {
     SecretFormField,
-    PublicKeyFormField
+    PublicKeyFormField,
   },
   emits: ["update:accountAddress"],
   props: {
     payerSecret: {
       type: String,
-      required: true
+      required: true,
     },
     payerSignsExternally: {
       type: Boolean,
-      default: true
-    }
+      default: true,
+    },
   },
   setup(props, { emit }) {
     const { payerSecret, payerSignsExternally } = toRefs(props);
@@ -92,8 +92,8 @@ export default defineComponent({
       onSetCloser,
       currentCloserSecret,
       newCloserAddress,
-      currentCloserSignsExternally
+      currentCloserSignsExternally,
     };
-  }
+  },
 });
 </script>

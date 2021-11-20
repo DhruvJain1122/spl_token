@@ -2,7 +2,7 @@ import {
   Cluster,
   clusterApiUrl,
   Commitment,
-  Connection
+  Connection,
 } from "@solana/web3.js";
 import { ref } from "vue";
 
@@ -14,7 +14,7 @@ export const CLUSTERS = {
   MAINNET: "mainnet-beta" as Cluster,
   TESTNET: "testnet" as Cluster,
   DEVNET: "devnet" as Cluster,
-  LOCALNET: "localnet" as Localnet
+  LOCALNET: "localnet" as Localnet,
 };
 
 export const chosenCluster = ref<Cluster | Localnet>(CLUSTERS.MAINNET);

@@ -7,7 +7,7 @@ import {
   SystemProgram,
   SYSVAR_RENT_PUBKEY,
   Transaction,
-  TransactionInstruction
+  TransactionInstruction,
 } from "@solana/web3.js";
 import { createAccount } from "../account";
 import { chosenCluster, COMMITMENT, getConnection } from "../connection";
@@ -37,7 +37,7 @@ export const inspectFaucet = async (faucetAddress: string) => {
       faucetKey: faucetKey.toBase58(),
       mintPubkey: mintPubkey.toBase58(),
       adminKey: adminKey?.toBase58(),
-      permittedAmount: permittedAmount.toString(10)
+      permittedAmount: permittedAmount.toString(10),
     };
   } catch (err) {
     throw new Error(
@@ -57,23 +57,23 @@ const buildCreateFaucetIx = (
     {
       pubkey: faucetAccountPublicKey,
       isSigner: false,
-      isWritable: true
+      isWritable: true,
     },
-    { pubkey: SYSVAR_RENT_PUBKEY, isSigner: false, isWritable: false }
+    { pubkey: SYSVAR_RENT_PUBKEY, isSigner: false, isWritable: false },
   ];
 
   if (adminAddress) {
     keys.push({
       pubkey: new PublicKey(adminAddress),
       isSigner: false,
-      isWritable: false
+      isWritable: false,
     });
   }
 
   return new TransactionInstruction({
     programId: FAUCET_PROGRAM_ID,
     data: Buffer.from([0, ...amount.toArray("le", 8)]),
-    keys
+    keys,
   });
 };
 
@@ -112,7 +112,7 @@ export const createFaucet = async (
       lamports: await connection.getMinimumBalanceForRentExemption(
         FAUCET_SIZE,
         COMMITMENT
-      )
+      ),
     });
 
     const mintAuthorityAccOrWallet = mintAuthoritySignsExternally
@@ -141,7 +141,7 @@ export const createFaucet = async (
   } else {
     const [feePayerAccount, mintAuthorityAccount] = await Promise.all([
       createAccount(feePayerSecret),
-      createAccount(mintAuthoritySecret)
+      createAccount(mintAuthoritySecret),
     ]);
 
     const createAccIx = SystemProgram.createAccount({
@@ -152,7 +152,7 @@ export const createFaucet = async (
       lamports: await connection.getMinimumBalanceForRentExemption(
         FAUCET_SIZE,
         COMMITMENT
-      )
+      ),
     });
 
     const transferAuthorityIx = Token.createSetAuthorityInstruction(
@@ -192,25 +192,25 @@ const buildAirdropTokensIx = async (
     {
       pubkey: tokenMintPublicKey,
       isSigner: false,
-      isWritable: true
+      isWritable: true,
     },
     { pubkey: destinationAccountPubkey, isSigner: false, isWritable: true },
     { pubkey: TOKEN_PROGRAM_ID, isSigner: false, isWritable: false },
-    { pubkey: faucetPubkey, isSigner: false, isWritable: false }
+    { pubkey: faucetPubkey, isSigner: false, isWritable: false },
   ];
 
   if (adminPubkey) {
     keys.push({
       pubkey: adminPubkey,
       isSigner: true,
-      isWritable: false
+      isWritable: false,
     });
   }
 
   return new TransactionInstruction({
     programId: FAUCET_PROGRAM_ID,
     data: Buffer.from([1, ...amount.toArray("le", 8)]),
-    keys
+    keys,
   });
 };
 
@@ -280,7 +280,7 @@ export const airdropTokens = async (
     }
     await sendAndConfirmTransaction(connection, tx, signers, {
       skipPreflight: false,
-      commitment: COMMITMENT
+      commitment: COMMITMENT,
     });
   }
   return tokenDestinationPublicKey.toBase58();
@@ -302,18 +302,18 @@ const buildCloseFaucetIx = async (
     {
       pubkey: faucetPubkey,
       isSigner: false,
-      isWritable: true
+      isWritable: true,
     },
     { pubkey: destPubkey, isSigner: false, isWritable: true },
     { pubkey: mintPubkey, isSigner: false, isWritable: true },
     { pubkey: TOKEN_PROGRAM_ID, isSigner: false, isWritable: false },
-    { pubkey: (await getPDA())[0], isSigner: false, isWritable: false }
+    { pubkey: (await getPDA())[0], isSigner: false, isWritable: false },
   ];
 
   return new TransactionInstruction({
     programId: FAUCET_PROGRAM_ID,
     data: Buffer.from([2]),
-    keys
+    keys,
   });
 };
 
@@ -367,7 +367,7 @@ export const closeFaucet = async (
       [feePayerAccount, adminAccount],
       {
         skipPreflight: false,
-        commitment: COMMITMENT
+        commitment: COMMITMENT,
       }
     );
   }

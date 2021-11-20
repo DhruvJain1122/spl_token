@@ -13,8 +13,8 @@
 export default {
   emits: ["update:checked"],
   props: {
-    checked: Boolean
-  }
+    checked: Boolean,
+  },
 };
 </script>
 

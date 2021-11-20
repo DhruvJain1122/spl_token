@@ -49,18 +49,18 @@ export default defineComponent({
   name: accountComponents.Mint,
   components: {
     SecretFormField,
-    PublicKeyFormField
+    PublicKeyFormField,
   },
   emits: ["update:accountAddress"],
   props: {
     payerSecret: {
       type: String,
-      required: true
+      required: true,
     },
     payerSignsExternally: {
       type: Boolean,
-      default: true
-    }
+      default: true,
+    },
   },
   setup(props, { emit }) {
     const { payerSecret, payerSignsExternally } = toRefs(props);
@@ -97,8 +97,8 @@ export default defineComponent({
       mintToAccount,
       mintAuthoritySecret,
       tokenAmount,
-      mintAuthoritySignsExternally
+      mintAuthoritySignsExternally,
     };
-  }
+  },
 });
 </script>

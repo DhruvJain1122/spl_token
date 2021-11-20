@@ -39,21 +39,21 @@ export default defineComponent({
   props: {
     secret: {
       type: String,
-      default: ""
+      default: "",
     },
     manualHint: {
       type: String,
       default:
-        "Check FAQ for valid secret types. Your secret is NOT saved NOR sent anywhere. It's only used to sign transactions locally."
+        "Check FAQ for valid secret types. Your secret is NOT saved NOR sent anywhere. It's only used to sign transactions locally.",
     },
     externalHint: {
       type: String,
-      default: ""
+      default: "",
     },
     signExternally: {
       type: Boolean,
-      default: true
-    }
+      default: true,
+    },
   },
   setup(props, { emit }) {
     const { signExternally } = toRefs(props);
@@ -61,6 +61,6 @@ export default defineComponent({
       emit("update:signExternally", !signExternally.value);
     };
     return { onToggleSignExternally };
-  }
+  },
 });
 </script>

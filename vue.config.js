@@ -1,10 +1,10 @@
-const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
-  .BundleAnalyzerPlugin;
+const BundleAnalyzerPlugin =
+  require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
 module.exports = {
-  chainWebpack: config => {
+  chainWebpack: (config) => {
     // title that shows up in different places e.g. the tab title
-    config.plugin("html").tap(args => {
+    config.plugin("html").tap((args) => {
       args[0].title = "SPL Token UI";
       return args;
     });
@@ -14,7 +14,7 @@ module.exports = {
       .rule("fonts")
       .use("url-loader")
       .loader("url-loader")
-      .tap(options => {
+      .tap((options) => {
         options.fallback.options.name = "fonts/[name].[ext]";
         // modify the options...
         return options;
@@ -22,6 +22,6 @@ module.exports = {
   },
   configureWebpack: {
     // this check exists so e.g. Netlify doesn't hang during deploy
-    plugins: process.env.DEPLOY ? [] : [new BundleAnalyzerPlugin()]
-  }
+    plugins: process.env.DEPLOY ? [] : [new BundleAnalyzerPlugin()],
+  },
 };

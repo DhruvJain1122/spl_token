@@ -4,7 +4,7 @@ import {
   MintLayout,
   Token,
   AccountLayout,
-  TOKEN_PROGRAM_ID
+  TOKEN_PROGRAM_ID,
 } from "@solana/spl-token";
 import { COMMITMENT, getConnection } from "../connection";
 import { createAccount } from "../account";
@@ -55,7 +55,7 @@ export const createNewToken = async (
         COMMITMENT
       ),
       space: MintLayout.span,
-      programId: TOKEN_PROGRAM_ID
+      programId: TOKEN_PROGRAM_ID,
     });
 
     const initMintIx = Token.createInitMintInstruction(
@@ -162,7 +162,7 @@ export const createTokenAccount = async (
       newAccountPubkey: newAccount.publicKey,
       lamports: balanceNeeded,
       space: AccountLayout.span,
-      programId: TOKEN_PROGRAM_ID
+      programId: TOKEN_PROGRAM_ID,
     });
 
     const createTokenAccountIx = Token.createInitAccountInstruction(

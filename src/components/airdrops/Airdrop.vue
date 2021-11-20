@@ -82,7 +82,7 @@ export default defineComponent({
   components: {
     Heading,
     PublicKeyFormField,
-    CopyIcon
+    CopyIcon,
   },
   setup() {
     const addressToAirdrop = ref("");
@@ -118,8 +118,8 @@ export default defineComponent({
       accountLink,
       errorMessage,
       addressThatReceivedAirdrop,
-      notMainnet
+      notMainnet,
     };
-  }
+  },
 });
 </script>

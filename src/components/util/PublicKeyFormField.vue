@@ -25,16 +25,16 @@ export default defineComponent({
   props: {
     address: {
       type: String,
-      default: ""
+      default: "",
     },
     derivePublicKey: {
       type: Boolean,
-      default: false
+      default: false,
     },
     hint: {
       type: String,
-      default: ""
-    }
+      default: "",
+    },
   },
   setup(_, { emit }) {
     const onDerivePublicKey = async () => {
@@ -43,6 +43,6 @@ export default defineComponent({
     };
 
     return { onDerivePublicKey };
-  }
+  },
 });
 </script>

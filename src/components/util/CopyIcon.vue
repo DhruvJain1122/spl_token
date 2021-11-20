@@ -14,8 +14,8 @@ export default defineComponent({
   props: {
     value: {
       type: String,
-      default: ""
-    }
+      default: "",
+    },
   },
   setup(props) {
     const { value } = toRefs(props);
@@ -26,6 +26,6 @@ export default defineComponent({
       setTimeout(() => (hasCopied.value = false), 400);
     };
     return { onCopy, hasCopied };
-  }
+  },
 });
 </script>

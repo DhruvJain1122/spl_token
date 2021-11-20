@@ -12,16 +12,14 @@
               <strong>SPL TOKEN UI</strong>
             </a>
             <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link">
-                Tokens
-              </a>
+              <a class="navbar-link"> Tokens </a>
 
               <div class="navbar-dropdown">
                 <router-link :to="{ name: 'token-creator' }">
                   <a
                     :class="{
                       'has-background-light': 'token-creator' === $route.name,
-                      'has-text-black': 'token-creator' === $route.name
+                      'has-text-black': 'token-creator' === $route.name,
                     }"
                     class="navbar-item"
                   >
@@ -32,7 +30,7 @@
                   <a
                     :class="{
                       'has-background-light': 'token-editor' === $route.name,
-                      'has-text-black': 'token-editor' === $route.name
+                      'has-text-black': 'token-editor' === $route.name,
                     }"
                     class="navbar-item"
                   >
@@ -42,16 +40,14 @@
               </div>
             </div>
             <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link">
-                Accounts
-              </a>
+              <a class="navbar-link"> Accounts </a>
 
               <div class="navbar-dropdown">
                 <router-link :to="{ name: 'account-creator' }">
                   <a
                     :class="{
                       'has-background-light': 'account-creator' === $route.name,
-                      'has-text-black': 'account-creator' === $route.name
+                      'has-text-black': 'account-creator' === $route.name,
                     }"
                     class="navbar-item"
                   >
@@ -62,7 +58,7 @@
                   <a
                     :class="{
                       'has-background-light': 'account-editor' === $route.name,
-                      'has-text-black': 'account-editor' === $route.name
+                      'has-text-black': 'account-editor' === $route.name,
                     }"
                     class="navbar-item"
                   >
@@ -72,13 +68,15 @@
               </div>
             </div>
             <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link">
-                Airdrops
-              </a>
+              <a class="navbar-link"> Airdrops </a>
               <div class="navbar-dropdown">
                 <p
                   class="navbar-item"
-                  style="margin-bottom: 5px; padding: 2px 0 0 16px; font-size: 13px"
+                  style="
+                    margin-bottom: 5px;
+                    padding: 2px 0 0 16px;
+                    font-size: 13px;
+                  "
                 >
                   <strong>SOL</strong>
                 </p>
@@ -86,7 +84,7 @@
                   <a
                     :class="{
                       'has-background-light': 'sol-airdrop' === $route.name,
-                      'has-text-black': 'sol-airdrop' === $route.name
+                      'has-text-black': 'sol-airdrop' === $route.name,
                     }"
                     class="navbar-item"
                   >
@@ -95,7 +93,11 @@
                 </router-link>
                 <p
                   class="navbar-item"
-                  style="margin-bottom: 5px; padding: 6px 0 0 16px; font-size: 13px"
+                  style="
+                    margin-bottom: 5px;
+                    padding: 6px 0 0 16px;
+                    font-size: 13px;
+                  "
                 >
                   <strong>TOKENS</strong>
                 </p>
@@ -103,7 +105,7 @@
                   <a
                     :class="{
                       'has-background-light': 'token-faucets' === $route.name,
-                      'has-text-black': 'token-faucets' === $route.name
+                      'has-text-black': 'token-faucets' === $route.name,
                     }"
                     class="navbar-item"
                   >
@@ -150,7 +152,7 @@
                   :key="cluster"
                   :class="{
                     'has-background-light': cluster === chosenCluster,
-                    'has-text-black': cluster === chosenCluster
+                    'has-text-black': cluster === chosenCluster,
                   }"
                   class="navbar-item"
                   @click="changeCluster(cluster)"
@@ -185,9 +187,10 @@ export default {
   setup() {
     changeCluster(chosenCluster.value);
 
-    const isOnMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-      navigator.userAgent
-    );
+    const isOnMobile =
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      );
 
     const currentClusterWithEmoji = computed(() => {
       let emoji;
@@ -213,7 +216,7 @@ export default {
       document
         .getElementsByClassName("navbar")[0]
         .querySelectorAll(".has-dropdown")
-        .forEach(el => {
+        .forEach((el) => {
           el.addEventListener("click", () => {
             let menu = el.querySelector(".navbar-dropdown");
             //@ts-expect-error
@@ -234,9 +237,9 @@ export default {
       chosenCluster,
       changeCluster,
       isOnMobile,
-      currentClusterWithEmoji
+      currentClusterWithEmoji,
     };
-  }
+  },
 };
 </script>
 

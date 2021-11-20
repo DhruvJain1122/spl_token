@@ -57,7 +57,7 @@
 import { ref } from "vue";
 import {
   createTokenAccount,
-  createAssociatedTokenAccount
+  createAssociatedTokenAccount,
 } from "@/solana/token";
 import { chosenCluster } from "@/solana/connection";
 import * as SolanaErrorHandler from "@/solana/SolanaErrorHandler";
@@ -73,7 +73,7 @@ export default {
     CopyIcon,
     PublicKeyFormField,
     Heading,
-    Toggle
+    Toggle,
   },
   setup() {
     const payerSecret = ref("");
@@ -123,8 +123,8 @@ export default {
       accountLink,
       errorMessage,
       payerSignsExternally,
-      createAssociatedAccount
+      createAssociatedAccount,
     };
-  }
+  },
 };
 </script>

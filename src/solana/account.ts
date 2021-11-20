@@ -1,7 +1,7 @@
 import { Account } from "@solana/web3.js";
 import {
   validateMnemonic as bip39validateMnemonic,
-  mnemonicToSeed as bip39mnemonicToSeed
+  mnemonicToSeed as bip39mnemonicToSeed,
 } from "bip39";
 import bs58 from "bs58";
 import { fromSeed as bip32FromSeed } from "bip32";
@@ -34,7 +34,7 @@ export const createAccount = async (secret: string): Promise<Account> => {
       secret
         .replace(/ /g, "")
         .split(",")
-        .map(n => parseInt(n))
+        .map((n) => parseInt(n))
     );
   }
 

@@ -94,7 +94,7 @@ export default {
     SecretFormField,
     CopyIcon,
     PublicKeyFormField,
-    Heading
+    Heading,
   },
   setup() {
     const payerSecret = ref("");
@@ -151,8 +151,8 @@ export default {
       tokenLink,
       errorMessage,
       feePayerSignsExternally,
-      currentAuthoritySignsExternally
+      currentAuthoritySignsExternally,
     };
-  }
+  },
 };
 </script>
