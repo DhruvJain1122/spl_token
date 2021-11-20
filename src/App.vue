@@ -150,8 +150,10 @@
     </div>
     <div style="display: flex" class="is-justify-content-bottom">
       <div style=" margin-bottom: 10px; margin-left : 10px" class="mt-6">
-      <a href="https://blog.blockdudes.com">Blog</a>
-      <a href="https://blog.blockdudes.com">Website</a>
+      <label class="label"><a href="https://blog.blockdudes.com">Blog</a>
+      &nbsp;&nbsp;
+      <a href="https://blockdudes.com">Website</a></label>
+      
       </div>
     </div>
   </template>
