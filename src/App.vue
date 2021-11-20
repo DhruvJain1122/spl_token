@@ -154,7 +154,7 @@
       <div style=" margin-bottom: 10px; margin-left : 10px" class="mt-6">
       <label class="label"><a href="https://blog.blockdudes.com">Blog</a>
       &nbsp;
-      <a href="https://blockdudes.com">Website</a></label>
+      <a href="https://blockdudes.com">Website</a>
        &nbsp;
       <a href="https://www.youtube.com/channel/UCYkKIg__RecFvfBXhyt9ttw">Youtube</a></label>
       </div>
