@@ -145,12 +145,13 @@
     </div>
      <div style="display: flex" class="is-justify-content-right">
       <div style="margin-bottom: 10px; margin-left : 10px" class="mt-6">
-      Visit our website
+      Made with SPL Token UI
       </div>
     </div>
     <div style="display: flex" class="is-justify-content-bottom">
       <div style=" margin-bottom: 10px; margin-left : 10px" class="mt-6">
-      Made with SPL Token UI
+      <a href="https://blog.blockdudes.com">Blog</a>
+      <a href="https://blog.blockdudes.com">Website</a>
       </div>
     </div>
   </template>
