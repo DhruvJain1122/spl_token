@@ -144,7 +144,7 @@
       </div>
     </div>
     <div style="display: flex" class="is-justify-content-bottom">
-      <div style="width: 50px; margin-bottom: 10px; margin-left : 10px" class="mt-6">
+      <div style=" margin-bottom: 10px; margin-left : 10px" class="mt-6">
       Made with SPL Token UI
       </div>
     </div>
