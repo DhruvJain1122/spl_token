@@ -144,16 +144,17 @@
       </div>
     </div>
      <div style="display: flex" class="is-justify-content-right">
-      <div style="margin-bottom: 10px; margin-left : 10px" class="mt-6">
+      <div style="margin-bottom: 10px; margin-right : 10px" class="mt-6">
       Made with SPL Token UI
       </div>
     </div>
     <div style="display: flex" class="is-justify-content-bottom">
       <div style=" margin-bottom: 10px; margin-left : 10px" class="mt-6">
       <label class="label"><a href="https://blog.blockdudes.com">Blog</a>
-      &nbsp;&nbsp;
+      &nbsp;
       <a href="https://blockdudes.com">Website</a></label>
-      
+       &nbsp;
+      <a href="https://www.youtube.com/channel/UCYkKIg__RecFvfBXhyt9ttw">Youtube</a></label>
       </div>
     </div>
   </template>
