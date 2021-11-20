@@ -9,7 +9,7 @@
         <div class="navbar-menu">
           <div class="navbar-start">
             <a class="navbar-item">
-              <strong>SPL TOKEN UI</strong>
+              <strong>Token Generate</strong>
             </a>
             <div class="navbar-item has-dropdown is-hoverable">
               <a class="navbar-link"> Tokens </a>
@@ -116,33 +116,7 @@
             </div>
           </div>
           <div class="navbar-end">
-            <div class="navbar-item">
-              <a
-                id="source-code"
-                href="https://github.com/paul-schaaf/spl-token-ui/blob/main/README.md#faq"
-                target="_blank"
-                rel="noopener noreferrer"
-                >FAQ</a
-              >
-            </div>
-            <div class="navbar-item">
-              <a
-                id="source-code"
-                href="https://github.com/paul-schaaf/spl-token-ui/blob/main/README.md#how-to"
-                target="_blank"
-                rel="noopener noreferrer"
-                >how-to</a
-              >
-            </div>
-            <div class="navbar-item">
-              <a
-                id="source-code"
-                href="https://github.com/paul-schaaf/spl-token-ui"
-                target="_blank"
-                rel="noopener noreferrer"
-                >source code</a
-              >
-            </div>
+            
             <div class="navbar-item has-dropdown is-hoverable">
               <a class="navbar-link"> {{ currentClusterWithEmoji }} </a>
 
@@ -167,6 +141,11 @@
     <div style="display: flex" class="is-justify-content-center">
       <div style="width: 650px; margin-bottom: 40px" class="mt-6">
         <router-view></router-view>
+      </div>
+    </div>
+    <div style="display: flex" class="is-justify-content-bottom">
+      <div style="width: 650px; margin-bottom: 40px" class="mt-6">
+      Made with
       </div>
     </div>
   </template>

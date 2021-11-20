@@ -5,7 +5,7 @@ module.exports = {
   chainWebpack: (config) => {
     // title that shows up in different places e.g. the tab title
     config.plugin("html").tap((args) => {
-      args[0].title = "SPL Token UI";
+      args[0].title = "Generate Token";
       return args;
     });
 
