@@ -143,14 +143,13 @@
         <router-view></router-view>
       </div>
     </div>
-    <footer id="footer">
-  <div id="footer-content">
-    <div style="display: flex" class="is-justify-content-bottom">
-      <div style=" margin-bottom: 10px; margin-left : 10px" class="mt-6">
-      Made with SPL Token UI
-      </div>
-    </div></div>
-</footer>
+    <div style="position: relative;background-color: blue; width: 600px; height: 800px;">    
+
+    <div style="position: absolute; bottom: 5px; background-color: green">
+    TEST (C) 2010
+    </div>
+</div>
+
 
   </template>
 
