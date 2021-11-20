@@ -143,14 +143,16 @@
         <router-view></router-view>
       </div>
     </div>
-    <div style="position: relative; width: 600px; height: 800px;">    
-
-    <div style="position: absolute; bottom: 5px; background-color: green">
-    Made with SPL Token UI
+     <div style="display: flex" class="is-justify-content-right">
+      <div style="margin-bottom: 10px; margin-left : 10px" class="mt-6">
+      Visit our website
+      </div>
     </div>
-</div>
-
-
+    <div style="display: flex" class="is-justify-content-bottom">
+      <div style=" margin-bottom: 10px; margin-left : 10px" class="mt-6">
+      Made with SPL Token UI
+      </div>
+    </div>
   </template>
 
   <p v-else>
