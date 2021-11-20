@@ -143,10 +143,10 @@
         <router-view></router-view>
       </div>
     </div>
-    <div style="position: relative;background-color: blue; width: 600px; height: 800px;">    
+    <div style="position: relative; width: 600px; height: 800px;">    
 
     <div style="position: absolute; bottom: 5px; background-color: green">
-    TEST (C) 2010
+    Made with SPL Token UI
     </div>
 </div>
 
