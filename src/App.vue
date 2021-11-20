@@ -145,7 +145,9 @@
     </div>
      <div style="display: flex" class="is-justify-content-right">
       <div style="margin-bottom: 10px; margin-right : 10px" class="mt-6">
+      <a href="https://github.com/paul-schaaf/spl-token-ui">
       Made with SPL Token UI
+      </a>
       </div>
     </div>
     <div style="display: flex" class="is-justify-content-bottom">
